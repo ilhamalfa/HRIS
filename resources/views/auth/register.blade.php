@@ -145,6 +145,16 @@
                 <option value="superadmin">Super Admin</option>
             </select>
         </div>
+        <div class="id_jabatan">
+            <p>Select Your J</p>
+            <select class="id_jabatan-select" id="id_jabatan" name="id_jabatan">
+                @if (count($jabatans) > 0)
+                    @foreach ($jabatans as $jbt)
+                        <option value="{{ $jbt->id }}">{{ $jbt->jabatan }}</option>
+                    @endforeach
+                @endif
+            </select>
+        </div>
         <div class="button">
             <button type="submit">GET STARTED</button>
         </div>

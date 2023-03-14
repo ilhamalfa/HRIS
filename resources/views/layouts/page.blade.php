@@ -41,7 +41,7 @@
 
     {{-- Sidebar Start --}}
     <nav class="sidebar">
-        @if (Auth::user())
+        {{-- @if (Auth::user()) --}}
         <a href="">
             <i data-feather="home">1</i>
             <span>Dashboard</span>
@@ -58,8 +58,8 @@
             <i data-feather="settings">1</i>
             <span>Settings</span>
         </a>
-        @endif
-        @guest
+        {{-- @endif --}}
+        {{-- @guest
             @if (Route::has('login') && Route::has('register'))
             <a href="{{ route('login') }}">
                 <i data-feather="log-in">1</i>
@@ -78,7 +78,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-        @endguest
+        @endguest --}}
     </nav>
     {{-- Sidebar End --}}
 
