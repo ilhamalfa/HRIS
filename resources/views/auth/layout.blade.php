@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <button id="btn">sajkfus</button>
     <main>
         @yield('content')
     </main>
@@ -35,9 +34,6 @@
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     <script>
         feather.replace()
-        $("#btn").click(function() {
-            alert("Handler for .click() called.");
-        });
     </script>
 </body>
 
