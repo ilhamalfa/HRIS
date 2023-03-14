@@ -125,9 +125,24 @@
         <div class="status">
             <p>Select Your Status</p>
             <select class="status-select" id="status" name="status">
-                <option value="lajang">Lajang</option>
-                <option value="menikah">User</option>
-                <option value="bercerai">User</option>
+                <option value="lajang">Bachelor</option>
+                <option value="menikah">Married</option>
+            </select>
+        </div>
+        <div class="children">
+            <label for="children">Total Children</label>
+            <input type="number" id="children" name="anak" placeholder="Total Children" required>
+        </div>
+        <div class="phone-number">
+            <label for="phone-number">Phone Number</label>
+            <input type="number" id="phone-number" name="no_telepon" placeholder="Phone Number" required>
+        </div>
+        <div class="role">
+            <p>Select Your Role</p>
+            <select class="role-select" id="role" name="role">
+                <option value="employee">Employee</option>
+                <option value="admin">Admin</option>
+                <option value="superadmin">Super Admin</option>
             </select>
         </div>
         <div class="button">
