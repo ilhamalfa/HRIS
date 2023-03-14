@@ -1,0 +1,86 @@
+:root {
+    --backgroundColor : #1b999e;
+    --textColor : #4b4c50;
+}
+
+body {
+    background-color: #e7e5e6;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Topbar Start */
+.topbar {
+    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.topbar .nav-logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.topbar .nav-extra {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.topbar .nav-extra a, .topbar .nav-extra i {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: .3s;
+}
+
+.topbar .nav-extra a:hover {
+    scale: 1.2;
+}
+/* Topbar End */
+
+/* Side Bar Start */
+.sidebar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    padding: 10vh 2vw 0 2vw;
+    width: 50vw;
+    transition: all .5s;
+}
+
+.active {
+    right: 0;
+}
+
+.sidebar a {
+    color: var(--textColor);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    margin: 15% 0;
+    padding: 10px;
+    transition: .3s;
+}
+
+.sidebar a:hover {
+    background-color: #e7e5e6;
+}
+
+.sidebar a span {
+    margin: 0 15px;
+}
+/* Side Bar End */

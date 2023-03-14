@@ -1,29 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+@extends('layouts.page')
 
-    {{-- Feather Icons --}}
-    <script src="https://unpkg.com/feather-icons"></script>
-</head>
-<body>
-    {{-- Navbar Start --}}
-    
-    {{-- Navbar End --}}
-    <nav>
-        <div class="nav-logo">
-            <a href="">KaryaOne</a>
-        </div>
-        <div class="nav-extra">
-            <a href=""></a>
-        </div>
-    </nav>
+@section('title', 'Dashboard')
 
-    <script>
-        feather.replace()
-    </script>
-</body>
-</html>
+@section('content')
+    <main>
+        <div class="about-company">
+            <img src="{{ asset('dashboard/logo/manager.png') }}" alt=""></img>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo harum qui similique, aut pariatur nisi voluptatem! Quibusdam, quas? Ducimus officiis obcaecati est esse at suscipit, perspiciatis quis! Accusamus, reprehenderit?</p>
+                <a href="">GUIDE</a>
+            </div>
+        </div>
+    </main>
+@endsection
