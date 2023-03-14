@@ -125,10 +125,17 @@
         <div class="status">
             <p>Select Your Status</p>
             <select class="status-select" id="status" name="status">
-                <option value="lajang">Lajang</option>
-                <option value="menikah">User</option>
-                <option value="bercerai">User</option>
+                <option value="lajang">Bachelor</option>
+                <option value="menikah">Married</option>
             </select>
+        </div>
+        <div class="children">
+            <label for="children">Total Children</label>
+            <input type="number" id="children" name="anak" placeholder="Total Children" required>
+        </div>
+        <div class="phone-number">
+            <label for="phone-number">Phone Number</label>
+            <input type="number" id="phone-number" name="no_telepon" placeholder="Phone Number" required>
         </div>
         <div class="button">
             <button type="submit">GET STARTED</button>
