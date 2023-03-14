@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('kota_asal');
             $table->string('alamat');
             $table->string('nik');
-            $table->enum('status', ['lajang', 'menikah','bercerai']);
+            $table->enum('status', ['lajang', 'menikah']);
             $table->integer('anak');
             $table->integer('no_telepon');
             $table->enum('role',['employee','admin','superadmin'])->default('employee');
