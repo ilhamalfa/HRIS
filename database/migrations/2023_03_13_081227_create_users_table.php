@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('negara');
             $table->string('kota_asal');
-            $table->string('nik');
             $table->string('alamat');
+            $table->string('nik');
             $table->enum('status', ['lajang', 'menikah','bercerai']);
             $table->integer('anak');
             $table->integer('no_telepon');
