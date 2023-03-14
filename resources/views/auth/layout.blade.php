@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('auth/css/style.css') }}">
 </head>
 <body>
     

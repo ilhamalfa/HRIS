@@ -83,7 +83,6 @@
 @section('content')
 <a href="{{ url('/') }}">Home</a>
 <div class="signup-card">
-    <h1>Sign Up</h1>
     <form action="{{ route('register') }}" method="POST">
     @csrf
         <div class="name">

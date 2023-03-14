@@ -11,5 +11,3 @@ document.addEventListener('click', function (e) {
         sideBar.classList.remove('active')
     }
 })
-
-console.log(sideBar);
