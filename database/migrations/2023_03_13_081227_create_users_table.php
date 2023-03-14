@@ -14,21 +14,10 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('username');
-            $table->string('password');
-            $table->string('negara');
-            $table->string('provinsi');
-            $table->string('kota_asal');
-            $table->string('alamat');
-            $table->string('nik');
-            $table->enum('status', ['lajang', 'menikah']);
-            $table->integer('anak');
-            $table->string('no_telepon');
-            $table->enum('role',['employee','admin','superadmin'])->default('employee');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->foreignId('id_jabatan');
-            $table->foreign('id_jabatan')->references('id')->on('jabatans');
+            $table->string('password');
+            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
