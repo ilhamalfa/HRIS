@@ -60,7 +60,7 @@ class RegisterController extends Controller
             'nik' => ['required', 'numeric', 'max:9999999999999999'],
             'status' => ['required', 'string', 'in_array:lajang,menikah'],
             'anak' => ['required','integer'],
-            'no_telepon' => ['required','numeric','max:9999999999999'],
+            'no_telepon' => ['required','string','max:13'],
             'role' => ['required', 'string', 'in_array:superadmin,admin,employee'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'id_jabatan' => ['required', 'exists:jabatans,id'],

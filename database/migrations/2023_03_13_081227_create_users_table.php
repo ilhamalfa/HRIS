@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('nik');
             $table->enum('status', ['lajang', 'menikah']);
             $table->integer('anak');
-            $table->integer('no_telepon');
+            $table->string('no_telepon');
             $table->enum('role',['employee','admin','superadmin'])->default('employee');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
