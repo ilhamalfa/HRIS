@@ -137,6 +137,14 @@
             <label for="phone-number">Phone Number</label>
             <input type="number" id="phone-number" name="no_telepon" placeholder="Phone Number" required>
         </div>
+        <div class="role">
+            <p>Select Your Role</p>
+            <select class="role-select" id="role" name="role">
+                <option value="employee">Employee</option>
+                <option value="admin">Admin</option>
+                <option value="superadmin">Super Admin</option>
+            </select>
+        </div>
         <div class="button">
             <button type="submit">GET STARTED</button>
         </div>
