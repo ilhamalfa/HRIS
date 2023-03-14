@@ -15,13 +15,14 @@ box-sizing: border-box;
 .topbar {
 background-color: var(--backgroundColor);
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
 position: fixed;
 top: 0;
 left: 0;
 right: 0;
 z-index: 999;
+padding: 0 5%;
 }
 
 .topbar .nav-logo a{
@@ -58,6 +59,7 @@ bottom: 0;
 padding: 10vh 2vw 0 2vw;
 width: 50vw;
 transition: all .5s;
+overflow: scroll;
 }
 
 .active {
@@ -126,3 +128,36 @@ main .about-company .description a {
     padding: .5em;
 }
 /* Main End */
+
+/* Media For Landscape Phone */
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        width: 25vw;
+        padding: 8vh 2vw 0 2vw;
+    }
+}
+
+/* Media For Tablet */
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        width: 30vw;
+        padding: 5vh 2vw 0 2vw;
+    }
+}
+
+/* Media For Laptop */
+@media only screen and (min-width: 992px) {
+    .topbar .nav-extra a:nth-child(2) {
+        display: none;
+    }
+
+    .sidebar {
+        width: 20vw;
+        padding: 5vh 2vw 0 2vw;
+        right: 0;
+    }
+
+    main {
+        margin: 15vh 15vw 10vh 0;
+    }
+}

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -69,5 +69,33 @@
             </div>
         </div>
     </div>
+</div>
+@endsection --}}
+
+@extends('auth.layout')
+
+@section('title', 'Login')
+
+@section('content')
+<a href="{{ url('/') }}">Home</a>
+<div class="login-card">
+    <form action="{{ route('login') }}" method="POST">
+    @csrf
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Your Email" required autocomplete="email">
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="current-password">
+        </div>
+        <div class="button">
+            <button type="submit">LOGIN</button>
+        </div>
+    </form>
+</div>
+<div class="signup">
+    <p>Don't have account?</p>
+    <a href="{{ route('register') }}">Sign Up</a>
 </div>
 @endsection

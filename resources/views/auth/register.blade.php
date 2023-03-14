@@ -83,7 +83,6 @@
 @section('content')
 <a href="{{ url('/') }}">Home</a>
 <div class="signup-card">
-    <h1>Sign Up</h1>
     <form action="{{ route('register') }}" method="POST">
     @csrf
         <div class="name">
@@ -143,6 +142,16 @@
                 <option value="employee">Employee</option>
                 <option value="admin">Admin</option>
                 <option value="superadmin">Super Admin</option>
+            </select>
+        </div>
+        <div class="id_jabatan">
+            <p>Select Your J</p>
+            <select class="id_jabatan-select" id="id_jabatan" name="id_jabatan">
+                @if (count($jabatans) > 0)
+                    @foreach ($jabatans as $jbt)
+                        <option value="{{ $jbt->id }}">{{ $jbt->jabatan }}</option>
+                    @endforeach
+                @endif
             </select>
         </div>
         <div class="button">

@@ -1,0 +1,30 @@
+:root {
+    --backgroundColor : #1b999e;
+    --textColor : #4b4c50;
+}
+
+body {
+    background-color: #e7e5e6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: white;
+    border: 3px solid  var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: 2em;
+}
+

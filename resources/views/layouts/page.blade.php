@@ -100,6 +100,6 @@
     </script>
 
     {{-- Hamburger Menu Animation --}}
-    <script src="{{ asset('layout/js/script.js') }}"></script>
+    <script src="{{ asset('js/sidebar.js') }}"></script>
 </body>
 </html>

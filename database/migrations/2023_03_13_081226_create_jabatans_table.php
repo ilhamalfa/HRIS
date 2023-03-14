@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('jabatans', function (Blueprint $table) {
-            $table->id();$table->string('jabatan');
+            $table->id();
+            $table->string('jabatan');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -20,7 +21,8 @@ return new class extends Migration
             $table->string('role');
             $table->rememberToken();
             $table->timestamps();
-        });
+    });
+    
     }
 
     /**
