@@ -18,14 +18,8 @@
     {{-- Feather Icons --}}
     <script src="https://unpkg.com/feather-icons"></script>
 
-    {{-- CSS Navbar --}}
-    <link rel="stylesheet" href="{{ asset('layout/css/style.css') }}">
-
-    {{-- CSS Dashboard --}}
-    <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
-
-    {{-- CSS Responsive --}}
-    <link rel="stylesheet" href="{{ asset('') }}">
+    {{-- CSS --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
 <body>
@@ -38,13 +32,16 @@
             <a href="">
                 <i data-feather="bell">1</i>
             </a>
-            <i data-feather="menu" id="hamburger-menu">1</i>
+            <a href="" onclick="event.preventDefault()">
+                <i data-feather="menu" id="hamburger-menu">1</i>
+            </a>
         </div>
     </nav>
     {{-- Topbar End --}}
 
     {{-- Sidebar Start --}}
     <nav class="sidebar">
+        @if (Auth::user())
         <a href="">
             <i data-feather="home">1</i>
             <span>Dashboard</span>
@@ -61,6 +58,27 @@
             <i data-feather="settings">1</i>
             <span>Settings</span>
         </a>
+        @endif
+        @guest
+            @if (Route::has('login') && Route::has('register'))
+            <a href="{{ route('login') }}">
+                <i data-feather="log-in">1</i>
+                <span>Login</span>
+            </a>
+            <a href="{{ route('register') }}">
+                <i data-feather="file-text">1</i>
+                <span>Register</span>
+            </a>
+            @endif
+            @else
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i data-feather="log-out">1</i>
+                <span>Logout</span>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        @endguest
     </nav>
     {{-- Sidebar End --}}
 
