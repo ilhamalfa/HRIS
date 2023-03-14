@@ -155,7 +155,6 @@ main .about-company .description a {
         width: 20vw;
         padding: 5vh 2vw 0 2vw;
         right: 0;
-        overflow: auto;
     }
 
     main {
