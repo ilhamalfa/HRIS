@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JobseekerController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('joobseeker',JobseekerController::class);
+Route::post('getKabupaten',[JobseekerController::class,'getKabupaten'])->name('getKabupaten');
+Route::post('getKecamatan',[JobseekerController::class,'getKecamatan'])->name('getKecamatan');
+Route::post('getDesa',[JobseekerController::class,'getDesa'])->name('getDesa');
