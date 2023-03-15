@@ -92,8 +92,6 @@ margin: 0 15px;
 }
 /* Side Bar End */
 
-
-
 /* Main Start */
 main {
     margin: 15vh 0;
@@ -131,6 +129,11 @@ main .carrier a {
     text-decoration: none;
     border-radius: 5px;
     padding: .5em;
+    transition: all .3s;
+}
+
+main .carrier a:hover {
+    scale: 1.2;
 }
 /* Main Carrier End */
 
