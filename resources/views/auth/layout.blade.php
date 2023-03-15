@@ -26,18 +26,15 @@
 </head>
 
 <body>
-    <button id="btn">sajkfus</button>
-    <main>
-        @yield('content')
-    </main>
-
+    @yield('content')
+    
     {{-- Feather Icons --}}
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     <script>
         feather.replace()
-        $("#btn").click(function() {
-            alert("Handler for .click() called.");
-        });
+        // $("#btn").click(function() {
+        //     alert("Handler for .click() called.");
+        // });
     </script>
 </body>
 

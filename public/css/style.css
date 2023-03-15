@@ -39,9 +39,14 @@ align-items: center;
 
 .topbar .nav-extra a, .topbar .nav-extra i {
 color: white;
+font-size: 1.5rem;
 text-decoration: none;
 margin: 0 10px;
 transition: .3s;
+}
+
+.topbar .nav-extra a.carrier {
+    display: none;
 }
 
 .topbar .nav-extra a:nth-child(1):hover {
@@ -87,6 +92,8 @@ margin: 0 15px;
 }
 /* Side Bar End */
 
+
+
 /* Main Start */
 main {
     margin: 15vh 0;
@@ -96,7 +103,8 @@ main {
     align-items: center;
 }
 
-main .about-company {
+/* Main Carrier Start */
+main .carrier {
     background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
@@ -107,26 +115,38 @@ main .about-company {
     box-sizing: border-box;
 }
 
-main .about-company img {
+main .carrier img {
     width: 30%;
 }
 
-main .about-company .description {
-    text-align: center;
-    margin: 10px;
-}
-
-main .about-company .description p {
+main .carrier p {
     color: white;
+    text-align: center;
 }
 
-main .about-company .description a {
+main .carrier a {
     background-color: white;
     color: var(--backgroundColor);
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     padding: .5em;
 }
+/* Main Carrier End */
+
+/* Main Guide Start */
+main .about-karyaone {
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Main Guide End */
+
 /* Main End */
 
 /* Media For Landscape Phone */
@@ -151,6 +171,10 @@ main .about-company .description a {
         display: none;
     }
 
+    .topbar .nav-extra a.carrier {
+        display: block;
+    }
+
     .sidebar {
         width: 20vw;
         padding: 5vh 2vw 0 2vw;
@@ -158,6 +182,6 @@ main .about-company .description a {
     }
 
     main {
-        margin: 15vh 15vw 10vh 0;
+        margin: 15vh 25vw 10vh 0;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\JobseekerController;
+use App\Http\Controllers\AfterAuth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard.dashboard');
-});
+Route::get('/', [AfterAuth::class, 'index']);
 
 Auth::routes();
 

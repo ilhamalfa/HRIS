@@ -77,8 +77,8 @@
 @section('title', 'Login')
 
 @section('content')
-<a href="{{ url('/') }}">Home</a>
-<div class="login-card">
+{{-- <a href="{{ url('/') }}">Home</a> --}}
+<div class="auth">
     <form action="{{ route('login') }}" method="POST">
     @csrf
         <div class="email">
@@ -94,8 +94,8 @@
         </div>
     </form>
 </div>
-<div class="signup">
+{{-- <div class="signup">
     <p>Don't have account?</p>
     <a href="{{ route('register') }}">Sign Up</a>
-</div>
+</div> --}}
 @endsection
