@@ -11,20 +11,47 @@ body {
     box-sizing: border-box;
 }
 
-main {
+.auth {
+    background-color: var(--backgroundColor);
+    margin: 4vh 4vw;
+    padding: 10%;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth form div {
+    margin: 2em;
+}
+
+.auth form .email, .auth form .password {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.login-card {
-    background-color: white;
-    border: 3px solid  var(--backgroundColor);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1em;
-    padding: 2em;
+.auth form div label {
+    opacity: 0;
 }
 
+.auth form div input {
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #e7e5e6;
+    width: 20em;
+}
+
+.auth form div input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.auth form div input:focus {
+    border-bottom: 3px solid white;
+}

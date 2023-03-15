@@ -29,9 +29,13 @@
             <a href="">KaryaOne</a>
         </div>
         <div class="nav-extra">
+            @if (Auth::user())
             <a href="">
                 <i data-feather="bell">1</i>
             </a>
+            @else
+            <a class="carrier" href="">CARRIER</a>
+            @endif
             <a href="" onclick="event.preventDefault()">
                 <i data-feather="menu" id="hamburger-menu">1</i>
             </a>
@@ -42,10 +46,12 @@
     {{-- Sidebar Start --}}
     <nav class="sidebar">
         @if (Auth::user())
-        <a href="">
-            <i data-feather="home">1</i>
-            <span>Dashboard</span>
-        </a>
+            @if (Auth::user()->role != 'candidate')
+                <a href="{{ url('/') }}">
+                    <i data-feather="home">1</i>
+                    <span>Dashboard</span>
+                </a>
+            @endif
         <a href="">
             <i data-feather="folder">1</i>
             <span>Manage</span>
@@ -84,6 +90,13 @@
 
     {{-- Main Start --}}
     <main>
+        @guest
+        <section class="carrier">
+            <img src="" alt="Logo Carrier">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere rem reprehenderit? Nisi necessitatibus dolorum repudiandae dolores consectetur molestias sit ipsam consequuntur eligendi, alias libero accusamus. Doloribus mollitia non tempore?</p>
+            <a href="">JOIN US!</a>
+        </section>
+        @endguest
         @yield('content')
     </main>
     {{-- Main End --}}

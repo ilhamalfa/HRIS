@@ -52,19 +52,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'negara' => ['required', 'string', 'max:255'],
-            'provinsi' => ['required', 'string', 'max:255'],
-            'kota_asal' => ['required', 'string', 'max:255'],
-            'alamat' => ['required', 'string', 'max:255'],
-            'nik' => ['required', 'numeric', 'max:9999999999999999'],
-            'status' => ['required', 'string', 'in_array:lajang,menikah'],
-            'anak' => ['required','integer'],
-            'no_telepon' => ['required','string','max:13'],
-            'role' => ['required', 'string', 'in_array:superadmin,admin,employee'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'id_jabatan' => ['required', 'exists:jabatans,id'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['required', 'string'],
         ]);
     }
 
@@ -78,19 +68,9 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'username' => $data['username'],
-            'password' => Hash::make($data['password']),
-            'negara' => $data['negara'],
-            'provinsi' => $data['provinsi'],
-            'kota_asal' => $data['kota_asal'],
-            'alamat' => $data['alamat'],
-            'nik' => $data['nik'],
-            'status' => $data['status'],
-            'anak' => $data['anak'],
-            'no_telepon' => $data['no_telepon'],
-            'role' => $data['role'],
             'email' => $data['email'],
-            'id_jabatan' => $data['id_jabatan'],
+            'password' => Hash::make($data['password']),
+            'role' => $data['role'],
         ]);
     }
 }

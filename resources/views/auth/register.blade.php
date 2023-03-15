@@ -101,58 +101,8 @@
             <label for="password-confirm">Password Confirm</label>
             <input type="password" id="password-confirm" name="password_confirmation" placeholder="Password Confirm" required autocomplete="new-password">
         </div>
-        <div class="country">
-            <label for="country">Country</label>
-            <input type="text" id="country" name="negara" placeholder="Country" required>
-        </div>
-        <div class="province">
-            <label for="province">Province</label>
-            <input type="text" id="province" name="provinsi" placeholder="Province" required>
-        </div>
-        <div class="city">
-            <label for="city">City</label>
-            <input type="text" id="city" name="kota_asal" placeholder="City" required>
-        </div>
-        <div class="address">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="alamat" placeholder="Address" required>
-        </div>
-        <div class="nik">
-            <label for="nik">NIK</label>
-            <input type="text" id="nik" name="nik" placeholder="NIK" required>
-        </div>
-        <div class="status">
-            <p>Select Your Status</p>
-            <select class="status-select" id="status" name="status">
-                <option value="lajang">Bachelor</option>
-                <option value="menikah">Married</option>
-            </select>
-        </div>
-        <div class="children">
-            <label for="children">Total Children</label>
-            <input type="number" id="children" name="anak" placeholder="Total Children" required>
-        </div>
-        <div class="phone-number">
-            <label for="phone-number">Phone Number</label>
-            <input type="number" id="phone-number" name="no_telepon" placeholder="Phone Number" required>
-        </div>
         <div class="role">
-            <p>Select Your Role</p>
-            <select class="role-select" id="role" name="role">
-                <option value="employee">Employee</option>
-                <option value="admin">Admin</option>
-                <option value="superadmin">Super Admin</option>
-            </select>
-        </div>
-        <div class="id_jabatan">
-            <p>Select Your J</p>
-            <select class="id_jabatan-select" id="id_jabatan" name="id_jabatan">
-                @if (count($jabatans) > 0)
-                    @foreach ($jabatans as $jbt)
-                        <option value="{{ $jbt->id }}">{{ $jbt->jabatan }}</option>
-                    @endforeach
-                @endif
-            </select>
+            <input type="hidden" name="role" value="candidate">
         </div>
         <div class="button">
             <button type="submit">GET STARTED</button>
